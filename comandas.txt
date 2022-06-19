@@ -1,0 +1,30 @@
+django-admin startproject premiosplatziapp
+
+py manage.py startapp polls
+
+python manage.py runserver
+
+python manage.py makemigrations polls
+
+python manage.py migrate
+
+python manage.py shell acceder a consola interactiva
+
+Question.objects.all()
+
+from django.utils import timezone
+from polls.models import Choice, Question
+q = Question()
+
+ q = Question(question_text="¿cual es el mejor curso de platzi?", pub_date=timezone.now())
+
+
+ q.save()
+
+Question.objects.all()
+
+q.question_text
+q.pub_date
+
+import os
+os.system("cls")
