@@ -1,0 +1,11 @@
+python manage.py shell
+
+import datetime
+from django.uitls import timezone
+from polls.models import Question
+
+q = Question(question_text="¿Quien es el mejor Course Director", pub_date= timezone.now() +datetime.timedelta(days=30))
+
+q.was_published_recently()
+
+python manage.py test polls
